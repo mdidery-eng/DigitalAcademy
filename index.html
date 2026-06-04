@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Digital Academy | Raih FYP dan Cuan Maksimal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030712; /* Deep Black Blue */
+        }
+        .text-elegant-blue { color: #3b82f6; }
+        .text-light-blue { color: #60a5fa; }
+        .bg-elegant-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1d4ed8 100%);
+        }
+        .bg-card-blue {
+            background-color: #0b1329;
+        }
+
+        /* CSS Murni untuk Slide / Infinite Marquee Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 6)); }
+        }
+        .slider-track {
+            display: flex;
+            width: calc(250px * 12);
+            animation: scroll 25s linear infinite;
+        }
+        .slider-track:hover {
+            animation-play-state: paused; /* Slide berhenti sejenak saat kursor ditaruh di atasnya */
+        }
+        .slide-item {
+            width: 250px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="text-gray-100 overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-blue-950 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-2xl font-extrabold tracking-wider">
+            <span class="text-light-blue">TT</span><span class="text-white">Digital</span><span class="text-elegant-blue">Academy</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-medium text-gray-300">
+            <a href="#tentang-kami" class="hover:text-light-blue transition">Tentang Kami</a>
+            <a href="#tim-manager" class="hover:text-light-blue transition">Tim Manager</a>
+            <a href="#brand-partner" class="hover:text-light-blue transition">Brand Partner</a>
+            <a href="#benefit" class="hover:text-light-blue transition">Benefit</a>
+            <a href="#testimoni" class="hover:text-light-blue transition">Testimoni</a>
+        </div>
+        <a href="#daftar" class="bg-elegant-gradient text-white font-bold px-6 py-2.5 rounded-full hover:scale-105 transition transform duration-200 shadow-lg shadow-blue-500/20">
+            Daftar Sekarang
+        </a>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-700/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 text-center z-10">
+            <span class="inline-block bg-blue-950/60 border border-blue-800 text-light-blue text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+                💎 #1 Premium TikTok Agency & Academy Terbuka
+            </span>
+            <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto mb-6 text-white">
+                Belajar & Bertumbuh Bersama <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Tanpa Biaya!</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                Kuasai live streaming, editing video, hingga kecerdasan buatan (AI) langsung dari mentor berpengalaman. Sukses bersama agensi elegan tanpa tekanan target!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#daftar" class="bg-elegant-gradient text-white font-bold text-lg px-8 py-4 rounded-xl hover:opacity-90 transition shadow-xl shadow-blue-500/20">
+                    Gabung Gratis Sekarang
+                </a>
+                <a href="#tentang-kami" class="bg-gray-950 border border-blue-900/50 text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-gray-900 transition">
+                    Pelajari Tentang Kami
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto mt-20 pt-10 border-t border-blue-950">
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-blue-400">100%</h3>
+                    <p class="text-gray-400 text-sm mt-1">Gratis Tanpa Potongan</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-blue-400">Bebas</h3>
+                    <p class="text-gray-400 text-sm mt-1">Target Durasi & Diamond</p>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-3xl md:text-4xl font-bold text-blue-400">Tiap Bulan</h3>
+                    <p class="text-gray-400 text-sm mt-1">Bonus & Event Berhadiah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang-kami" class="py-24 border-t border-blue-950 bg-gray-950 relative">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-5 space-y-4">
+                    <span class="text-light-blue font-bold tracking-widest text-xs uppercase block">Official Partner</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Siapa Kami?</h2>
+                    <div class="h-1 w-20 bg-elegant-gradient rounded-full"></div>
+                </div>
+                <div class="md:col-span-7 bg-card-blue border border-blue-900/40 p-8 rounded-2xl shadow-xl space-y-4">
+                    <p class="text-gray-200 leading-relaxed font-semibold text-lg">
+                        Digital Academy adalah <span class="text-light-blue">Tim Operasional TikTok Independen</span>.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        Kami merupakan mitra kerja resmi yang diberikan tugas langsung oleh TikTok untuk mendampingi, membina, dan membantu seluruh konten kreator Entertainment di Indonesia agar dapat terus berkembang secara maksimal.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-sm border-t border-blue-950 pt-4 italic">
+                        "Segala bentuk edukasi, pelatihan, dan fasilitas benefit yang kami berikan sepenuhnya <span class="text-light-blue font-semibold not-italic">TIDAK PERLU MEMBAYAR</span>. Hal ini karena pembinaan ini sudah menjadi kewajiban tugas serta tanggung jawab penuh kami sebagai <span class="text-white font-semibold not-italic">Tim Manager TikTok Live Creator Network</span>."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tim-manager" class="py-24 bg-gray-900/30 border-b border-blue-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-light-blue font-bold tracking-widest text-xs uppercase block mb-2">Creative & Operational Leaders</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Tim Manager Resmi Kami</h2>
+                <p class="text-gray-400">Pilih Manager andalanmu dan klik daftar untuk mendapatkan bimbingan intensif serta perlindungan akun secara langsung.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="bg-card-blue border border-blue-950 rounded-2xl overflow-hidden group hover:border-light-blue transition duration-300 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="relative h-64 overflow-hidden bg-gray-900">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&q=80" alt="Manager Dery" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-90"></div>
+                        </div>
+                        <div class="p-5 text-center">
+                            <h4 class="text-xl font-bold text-white mb-1">Dery</h4>
+                            <p class="text-light-blue text-xs font-semibold uppercase tracking-wider mb-4">Tim Manager TikTok Live</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20gabung%20ke%20Digital%20Academy%20dan%20daftar%20bersama%20Manager%20Dery" target="_blank" class="block w-full bg-transparent border border-blue-700 text-light-blue hover:bg-blue-700 hover:text-white text-center font-bold text-sm py-2.5 rounded-xl transition duration-200">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Daftar Bersama Dery
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-card-blue border border-blue-950 rounded-2xl overflow-hidden group hover:border-light-blue transition duration-300 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="relative h-64 overflow-hidden bg-gray-900">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80" alt="Manager Elisa Sipayung" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-90"></div>
+                        </div>
+                        <div class="p-5 text-center">
+                            <h4 class="text-xl font-bold text-white mb-1">Elisa Sipayung</h4>
+                            <p class="text-light-blue text-xs font-semibold uppercase tracking-wider mb-4">Tim Manager TikTok Live</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20gabung%20ke%20Digital%20Academy%20dan%20daftar%20bersama%20Manager%20Elisa%20Sipayung" target="_blank" class="block w-full bg-transparent border border-blue-700 text-light-blue hover:bg-blue-700 hover:text-white text-center font-bold text-sm py-2.5 rounded-xl transition duration-200">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Daftar Bersama Elisa
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-card-blue border border-blue-950 rounded-2xl overflow-hidden group hover:border-light-blue transition duration-300 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="relative h-64 overflow-hidden bg-gray-900">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80" alt="Manager Zuhri Pringsewuhost" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-90"></div>
+                        </div>
+                        <div class="p-5 text-center">
+                            <h4 class="text-xl font-bold text-white mb-1">Zuhri Pringsewuhost</h4>
+                            <p class="text-light-blue text-xs font-semibold uppercase tracking-wider mb-4">Tim Manager TikTok Live</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20gabung%20ke%20Digital%20Academy%20dan%20daftar%20bersama%20Manager%20Zuhri%20Pringsewuhost" target="_blank" class="block w-full bg-transparent border border-blue-700 text-light-blue hover:bg-blue-700 hover:text-white text-center font-bold text-sm py-2.5 rounded-xl transition duration-200">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Daftar Bersama Zuhri
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-card-blue border border-blue-950 rounded-2xl overflow-hidden group hover:border-light-blue transition duration-300 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="relative h-64 overflow-hidden bg-gray-900">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80" alt="Manager Risma" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-90"></div>
+                        </div>
+                        <div class="p-5 text-center">
+                            <h4 class="text-xl font-bold text-white mb-1">Risma</h4>
+                            <p class="text-light-blue text-xs font-semibold uppercase tracking-wider mb-4">Tim Manager TikTok Live</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20gabung%20ke%20Digital%20Academy%20dan%20daftar%20bersama%20Manager%20Risma" target="_blank" class="block w-full bg-transparent border border-blue-700 text-light-blue hover:bg-blue-700 hover:text-white text-center font-bold text-sm py-2.5 rounded-xl transition duration-200">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Daftar Bersama Risma
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="brand-partner" class="py-20 bg-gray-950 border-b border-blue-950/60 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-light-blue font-bold tracking-widest text-xs uppercase block mb-1">Ecosystem & Collaboration</span>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">Brand Partner & Network Kami</h3>
+                <p class="text-gray-500 text-sm mt-2">Menghubungkan konten kreator kami langsung dengan jaringan brand besar untuk kebutuhan campaign dan UGC.</p>
+            </div>
+            
+            <div class="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 before:bg-gradient-to-r before:from-gray-950 before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 after:bg-gradient-to-l after:from-gray-950 after:to-transparent">
+                <div class="slider-track gap-6 py-4">
+                    
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-shirt"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">VOGUE-X</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">NEXA-TECH</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-sparkles"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">GLOW-UP</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-gamepad"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">APEX-GG</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-bowl-food"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">FOODIE-CO</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-dumbbell"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">FIT-LIFE</span>
+                    </div>
+
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-shirt"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">VOGUE-X</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">NEXA-TECH</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-sparkles"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">GLOW-UP</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-gamepad"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">APEX-GG</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-bowl-food"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">FOODIE-CO</span>
+                    </div>
+                    <div class="slide-item bg-card-blue border border-blue-950/40 px-6 py-5 rounded-xl text-center shadow-md flex items-center justify-center gap-3 hover:border-blue-500 transition duration-300">
+                        <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl"><i class="fa-solid fa-dumbbell"></i></div>
+                        <span class="text-gray-300 font-bold tracking-wider text-sm">FIT-LIFE</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefit" class="py-24 bg-gray-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">15 Benefit Eksklusif Untukmu</h2>
+                <p class="text-gray-400">Fasilitas terbaik, pembinaan intensif, dan ekosistem cuan terlengkap yang bisa kamu nikmati gratis setelah bergabung.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Gratis Selamanya</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Seluruh program pelatihan, mentoring, dan akses materi tidak dipungut biaya sepeser pun sejak awal bergabung.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Tanpa Biaya & Potongan</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Pendapatan yang kamu hasilkan murni milikmu. Tidak ada biaya tersembunyi ataupun potongan dari agensi.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Mendapatkan Bonus Bulanan</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Apresiasi tambahan berupa bonus bulanan bagi para kreator dan talent yang aktif berkembang dan konsisten.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-arrow-up-trend-2d"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Jaminan Berkembang</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Dengan sistem evaluasi akun secara berkala, kami menjamin kualitas konten dan interaksi akunmu akan meningkat pesat.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Rilis Musik Resmi Gratis</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Khusus kreator musik, kami bantu distribusikan karyamu secara gratis ke seluruh platform DSP dunia (Spotify, Apple Music, dll).</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-rectangle-ad"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Potensi Cuan UGC & Endorse</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Hubungkan karyamu dengan brand-brand besar untuk mendapatkan kerja sama User Generated Content (UGC) dan endorsement bernilai tinggi.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Keamanan Akun & Aju Banding</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Perlindungan akun ekstra. Kami berikan bantuan penuh untuk proses aju banding jika akunmu terkena pelanggaran atau pembatasan.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-ban"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Tidak Ditarget Durasi & Diamond</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Bekerja dan berkarya tanpa tekanan stres. Kamu bebas menentukan waktu live tanpa beban kejar target angka.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Event Berhadiah Setiap Bulan</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Selalu ada kompetisi internal dan event seru berhadiah menarik untuk memacu semangat berkreasi seluruh member.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Akses Platform Cuan Lainnya</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Jangan batasi pendapatanmu. Kami berikan akses ke berbagai ekosistem platform digital lain yang terbukti menghasilkan.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-tower-broadcast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Tips Live Streaming FYP</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Pelajari algoritma retensi penonton saat siaran langsung agar room kamu selalu direkomendasikan masuk ke halaman utama.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Membuat Konten FYP</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Bongkar rahasia pembuatan video pendek mulai dari penulisan hook yang memikat hingga teknik editing viral.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Setup Live OBS Profesional</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Panduan teknis menggunakan OBS Studio untuk live streaming via PC/Laptop agar kualitas siaran jernih layaknya studio TV.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Menggunakan AI Script Konten</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Tak perlu pusing cari ide konten. Manfaatkan teknologi Artificial Intelligence (AI) untuk membuat ratusan skrip video dalam hitungan menit.</p>
+                </div>
+                <div class="bg-card-blue border border-blue-950 p-8 rounded-2xl hover:border-light-blue transition duration-300 md:col-span-2 lg:col-span-1 mx-auto w-full">
+                    <div class="w-12 h-12 bg-blue-500/10 flex items-center justify-center rounded-xl mb-6 text-light-blue text-xl">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Bebas Belajar Setiap Hari</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Dapatkan bimbingan intensif harian. Kamu bebas bertanya, berkonsultasi, dan membedah akun secara langsung bersama Mentor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Kisah Sukses Alumni</h2>
+                <p class="text-gray-400">Mereka yang sudah bergabung dan merasakan keuntungan fasilitas kami tanpa modal awal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-card-blue p-8 rounded-2xl border border-blue-950/60 shadow-lg">
+                    <p class="text-gray-300 italic mb-6">"Senang banget gabung di sini karena gak ada tekanan target durasi. Pas akun kena peringatan sistem, tim manager agensi langsung bantu aju banding dan aktif lagi dalam beberapa jam!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" alt="Alumni 1" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white">Rian Gumilar</h5>
+                            <p class="text-xs text-light-blue">Gaming Streamer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card-blue p-8 rounded-2xl border border-blue-950/60 shadow-lg">
+                    <p class="text-gray-300 italic mb-6">"Sebagai musisi indie, terbantu banget sejak gabung di sini karena lagu ciptaan saya dirilis ke Spotify secara gratis. Konten TikTok saya juga langsung banyak dilirik brand buat di-endorse!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" alt="Alumni 2" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white">Satria Musik</h5>
+                            <p class="text-xs text-light-blue">Music Content Creator</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-card-blue p-8 rounded-2xl border border-blue-950/60 shadow-lg">
+                    <p class="text-gray-300 italic mb-6">"Fitur belajar AI Script-nya sangat membantu! Ditambah bimbingan mentor harian, perkembangan views saya jadi sangat konsisten dari minggu ke minggu."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="Alumni 3" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white">Dika Pratama</h5>
+                            <p class="text-xs text-white">Content Creator AI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="daftar" class="py-24 relative overflow-hidden bg-gray-950">
+        <div class="absolute inset-0 bg-elegant-gradient opacity-5 blur-3xl"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">Ambil Slot Eksklusif Kamu Sekarang!</h2>
+            <p class="text-gray-300 text-lg max-w-xl mx-auto mb-10">
+                Pendaftaran untuk kuota pendampingan resmi dari Tim Manager Live Network bulan ini sangat terbatas demi efektivitas grup.
+            </p>
+            
+            <div class="bg-card-blue border border-blue-950 rounded-3xl p-8 md:p-12 max-w-md mx-auto shadow-2xl">
+                <span class="inline-block bg-blue-500/10 text-blue-400 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                    🔵 OFFICIAL REGISTRATION
+                </span>
+                <h4 class="text-3xl font-black text-white mb-2">Rp 0</h4>
+                <p class="text-light-blue font-semibold text-sm mb-8">100% GRATIS & DIBIAYAI PENUH</p>
+                
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20gabung%20ke%20Agency%20TikTok%20Digital%20Academy%20secara%20Gratis" target="_blank" class="block w-full bg-elegant-gradient text-white font-bold text-center py-4 rounded-xl hover:scale-[1.02] transition transform duration-200 shadow-lg shadow-blue-500/30">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Hubungi Admin Via WhatsApp
+                </a>
+                <p class="text-gray-500 text-xs mt-4"><i class="fa-solid fa-shield-halved mr-1"></i> Dibimbing Resmi dari Nol sampai Sukses Berpenghasilan</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-blue-950 py-8 bg-gray-950 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 TTDigitalAcademy. Tim Operasional TikTok Independen Indonesia.</p>
+    </footer>
+
+</body>
+</html>
