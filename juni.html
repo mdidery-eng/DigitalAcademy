@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadiah Untuk Yang Paling Semangat Belajar!</title>
+    <style>
+        :root {
+            --bg-color: #0f0c1b;
+            --card-bg: #1d1833;
+            --accent-color: #ff007f;
+            --gold-color: #ffd700;
+            --text-color: #ffffff;
+            --text-muted: #b9b6cd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Style */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #2b1055, #7597de);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--gold-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        /* Card Style */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--accent-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: #00f2fe;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .date-badge {
+            background-color: rgba(255, 0, 127, 0.2);
+            color: var(--accent-color);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Prizes List */
+        .prizes {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .prizes li {
+            padding: 8px 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Table Style */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--gold-color);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Callout Box */
+        .bonus-box {
+            background: linear-gradient(135deg, #4300b0, #ff007f);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .bonus-box h4 {
+            color: var(--gold-color);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .note {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Button Style */
+        .cta-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 30px;
+            box-shadow: 0 5px 20px rgba(79, 172, 254, 0.4);
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 5px 25px rgba(79, 172, 254, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .card h2 { font-size: 1.3rem; }
+            th, td { padding: 8px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER -->
+        <header>
+            <h1>🏆 JUNI BANJIR REWARD 🏆</h1>
+            <p>Event Khusus Kreator Juni — Hadiah Untuk Yang Paling Semangat Belajar!!</p>
+        </header>
+
+        <!-- EVENT 1 -->
+        <div class="card">
+            <h2>👥 1. EVENT FOLLOWERS JUNI</h2>
+            <p>Pemenang ditentukan berdasarkan akumulasi poin tertinggi di akhir periode.</p>
+            <ul class="prizes">
+                <li>🥇 <strong>Juara 1 :</strong> Rp300.000</li>
+                <li>🥈 <strong>Juara 2 :</strong> Rp200.000</li>
+                <li>🥉 <strong>Juara 3 :</strong> Rp150.000</li>
+            </ul>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aktivitas Konten</th>
+                        <th>Perolehan Poin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 Followers Baru</td>
+                        <td><strong>+1 Point</strong></td>
+                    </tr>
+                    <tr>
+                        <td>1 Valid Day</td>
+                        <td><strong>+50 Point</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Hadir Zoom Meeting</td>
+                        <td><strong>+100 Point</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="bonus-box">
+                <h4>🔥 SPESIAL BONUS MALAM INI!</h4>
+                <p>Orang pertama yang menembus <strong>5.000 Followers</strong> dapat bonus tambahan sebesar <strong>Rp500.000</strong>!</p>
+            </div>
+            <p class="note">*NOTE: Followers yang dihitung hanya yang didapatkan dari sesi Live Streaming.</p>
+        </div>
+
+        <!-- EVENT 2 -->
+        <div class="card" style="border-left-color: #00f2fe;">
+            <h2>🌍 2. EVENT INTERNATIONAL LEADERBOARD</h2>
+            <ul class="prizes">
+                <li>🥇 <strong>Juara 1 :</strong> Rp300.000</li>
+                <li>🥈 <strong>Juara 2 :</strong> Rp200.000</li>
+                <li>🥉 <strong>Juara 3 :</strong> Rp100.000</li>
+            </ul>
+            <p class="note">*Syarat klaim reward: Wajib memiliki minimal 22 Valid Day & 90 Jam Live.</p>
+        </div>
+
+        <!-- EVENT 3 -->
+        <div class="card" style="border-left-color: #ffd700;">
+            <span class="date-badge">Mulai Tgl 20 Bulan Ini</span>
+            <h2>🌐 3. EVENT WORLD LEADERBOARD</h2>
+            <ul class="prizes">
+                <li>🥇 <strong>Juara 1 :</strong> Rp1.500.000</li>
+                <li>🥈 <strong>Juara 2 :</strong> Rp1.000.000</li>
+                <li>🥉 <strong>Juara 3 :</strong> Rp750.000</li>
+            </ul>
+            <p class="note">*Syarat klaim reward: Wajib mendapatkan minimal 10 Valid Day & 50 Jam Live.</p>
+        </div>
+
+        <!-- EVENT 4 -->
+        <div class="card" style="border-left-color: #a855f7;">
+            <h2>🎰 4. EVENT SPIN DURASI TERTINGGI</h2>
+            <p>Apresiasi ekstra untuk pejuang *live* konsisten! Total hadiah sebesar:</p>
+            <h3 style="color: var(--gold-color); font-size: 1.6rem; margin: 10px 0;">Rp500.000</h3>
+            <p class="note">*Syarat masuk undian/spin: Berhasil mencapai 22 Valid Day & 90 Jam Live.</p>
+        </div>
+
+        <!-- EVENT 5 -->
+        <div class="card" style="border-left-color: #22c55e;">
+            <h2>🎁 5. BONUS BULANAN (PASTI ADA)</h2>
+            <p>Jangan lewatkan bonus bulanan reguler agensi! Setiap pencapaian target memiliki tingkatan reward yang berbeda-beda.</p>
+            <p class="note" style="color: #22c55e; font-weight: bold;">👉 Silakan cek rincian target lengkapnya di Deskripsi Grup WhatsApp sekarang juga!</p>
+        </div>
+
+        <!-- CALL TO ACTION BUTTON -->
+        <!-- Ganti tanda # di bawah dengan link grup atau link admin Anda -->
+        <a href="#" class="cta-btn" target="_blank">SEMUA BONUS 100% DILUAR DARI PENDAPATAN TIKTOK 🚀</a>
+
+    </div>
+
+</body>
+</html>
