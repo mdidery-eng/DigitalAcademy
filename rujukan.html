@@ -62,29 +62,29 @@
                     <label class="text-xs sm:text-sm font-bold text-gray-300 uppercase tracking-wider">👥 1. Berapa kreator yang mau kamu ajak?</label>
                     <span class="text-2xl font-black text-[#25F4EE] unbounded" id="display-creators">5</span>
                 </div>
-                <input type="range" id="input-creators" min="1" max="50" value="20" class="w-full h-2.5 bg-gray-800 rounded-full appearance-none cursor-pointer accent-[#FE2C55]">
+                <input type="range" id="input-creators" min="1" max="100" value="20" class="w-full h-2.5 bg-gray-800 rounded-full appearance-none cursor-pointer accent-[#FE2C55]">
                 <div class="flex justify-between text-[10px] text-gray-500 mt-1.5">
                     <span>1 Kreator</span>
-                    <span>50 Kreator</span>
+                    <span>100 Kreator</span>
                 </div>
             </div>
 
             <!-- STEP 2: CHOOSE AVERAGE DIAMONDS -->
             <div class="mb-10">
                 <div class="flex justify-between items-center mb-2">
-                    <label class="text-xs sm:text-sm font-bold text-gray-300 uppercase tracking-wider">💎 2. Target Diamond per Kreator</label>
+                    <label class="text-xs sm:text-sm font-bold text-gray-300 uppercase tracking-wider">💎 2. Pendapatan Diamond per Kreator</label>
                     <span class="text-base font-black text-white" id="display-target-diamonds">10.000 💎</span>
                 </div>
                 <!-- Preset Buttons for quick, fun interaction -->
                 <div class="grid grid-cols-3 gap-2.5">
                     <button type="button" onclick="setDiamonds(10000, this)" class="diamond-btn bg-[#FE2C55]/20 border border-[#FE2C55] text-white text-xs font-bold py-3 px-2 rounded-xl transition">
-                        10.000 💎 <span class="block text-[9px] font-normal text-gray-400">Target Santai</span>
+                        10.000 💎 <span class="block text-[9px] font-normal text-gray-400">Rujukan Santai</span>
                     </button>
                     <button type="button" onclick="setDiamonds(30000, this)" class="diamond-btn bg-gray-800 border border-transparent hover:border-gray-700 text-white text-xs font-bold py-3 px-2 rounded-xl transition">
-                        30.000 💎 <span class="block text-[9px] font-normal text-gray-400">Target Medium</span>
+                        30.000 💎 <span class="block text-[9px] font-normal text-gray-400">Rujukan Medium</span>
                     </button>
                     <button type="button" onclick="setDiamonds(50000, this)" class="diamond-btn bg-gray-800 border border-transparent hover:border-gray-700 text-white text-xs font-bold py-3 px-2 rounded-xl transition">
-                        50.000 💎 <span class="block text-[9px] font-normal text-gray-400">Target Bintang</span>
+                        50.000 💎 <span class="block text-[9px] font-normal text-gray-400">Rujukan Bintang</span>
                     </button>
                 </div>
             </div>
