@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Pendapatan Live TikTok 2026 - Multi-Kurs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-gradient-to-tr from-pink-500 to-violet-600 p-2 rounded-lg text-white font-bold text-xl">
+                    <span>Live</span>
+                </div>
+                <span class="font-bold text-lg tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-400">
+                    KALKULATOR TIKTOK
+                </span>
+            </div>
+            <div class="text-sm bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700 text-slate-300">
+                Est Harga Koin: <span class="text-emerald-400 font-semibold" id="topHargaKoin">Rp 212</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <div class="md:col-span-7 bg-slate-800/50 p-6 rounded-2xl border border-slate-700 backdrop-blur shadow-xl space-y-6">
+            <div>
+                <h1 class="text-2xl font-bold text-white mb-2">Simulasikan Pendapatan Live Anda</h1>
+                <p class="text-sm text-slate-400">Sesuaikan kurs dolar saat ini untuk mendapatkan estimasi konversi harga koin yang akurat.</p>
+            </div>
+
+            <hr class="border-slate-700" />
+
+            <div class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-900/40 p-4 rounded-xl border border-slate-800">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2" for="kursDolar">Kurs 1 USD ke IDR</label>
+                        <div class="relative">
+                            <input type="number" id="kursDolar" value="17829" min="0" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-violet-500 font-medium transition pl-10">
+                            <span class="absolute left-3 top-2.5 text-sm text-slate-500">Rp</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Harga 1 Koin (Otomatis)</label>
+                        <div class="w-full bg-slate-800/80 border border-slate-700/50 rounded-xl px-4 py-2 text-emerald-400 font-bold text-lg" id="calcHargaKoin">
+                            Rp 212
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-300 mb-2" for="koin">Jumlah Koin yang Didapat</label>
+                    <div class="relative">
+                        <input type="number" id="koin" value="1000" min="0" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-pink-500 font-semibold text-lg transition pl-12">
+                        <span class="absolute left-4 top-3.5 text-xl">🪙</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-300 mb-2" for="durasi">Durasi Live per Sesi</label>
+                        <select id="durasi" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-pink-500 transition">
+                            <option value="4">Dibawah 5 Menit (20%)</option>
+                            <option value="5" selected>Tepat 5 Menit (Aturan Khusus 20%)</option>
+                            <option value="9">Dibawah 10 Menit (30%)</option>
+                            <option value="24">Dibawah 25 Menit (35%)</option>
+                            <option value="61">Lebih dari 1 Jam / >60 Menit (40%)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-300 mb-2" for="followers">Tambahan Followers Sesi</label>
+                        <select id="followers" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-pink-500 transition">
+                            <option value="0">0 Followers (0%)</option>
+                            <option value="1">Dibawah 2 Followers (1%)</option>
+                            <option value="2">Hanya 2 Followers (Tambahan 1%)</option>
+                            <option value="4">Dibawah 5 Followers (1.5%)</option>
+                            <option value="6" selected>Diatas 5 Followers (Tambahan 2%)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50">
+                    <div class="flex items-start space-x-3">
+                        <input type="checkbox" id="validDay" checked class="mt-1 w-4 h-4 text-pink-600 bg-slate-900 border-slate-700 rounded focus:ring-pink-500">
+                        <div>
+                            <label for="validDay" class="block text-sm font-semibold text-slate-200 cursor-pointer">
+                                Klaim Bonus Mingguan (Hari Senin)
+                            </label>
+                            <p class="text-xs text-slate-400 mt-1">
+                                Syarat: Dalam 7 hari melakukan live lebih dari 2 kali di hari yang berbeda dengan durasi live di atas 60 menit (Mendapatkan Valid Day 2 hari dalam seminggu). Tambahan +10% lagi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-5 space-y-6 sticky top-24">
+            <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 shadow-2xl relative overflow-hidden">
+                <h3 class="text-xs uppercase font-bold tracking-widest text-slate-400 mb-1">Pendapatan Sesi (Langsung Masuk Saldo)</h3>
+                <div class="text-2xl font-bold text-white mb-4" id="totalPendapatan">Rp 0</div>
+                
+                <hr class="border-slate-700 my-4" />
+
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Total Kotor Koin (100%)</span>
+                        <span class="text-slate-200 font-medium" id="totalKotor">Rp 0</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-slate-400 flex items-center">Pendapatan Durasi Live <span class="text-xs bg-slate-700 px-1.5 py-0.5 rounded ml-1 text-slate-300" id="lblDurasi">0%</span></span>
+                        <span class="text-emerald-400 font-medium" id="valDurasi">Rp 0</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-slate-400 flex items-center">Tambahan Follower Baru <span class="text-xs bg-slate-700 px-1.5 py-0.5 rounded ml-1 text-slate-300" id="lblFollower">0%</span></span>
+                        <span class="text-emerald-400 font-medium" id="valFollower">Rp 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700 flex justify-between items-center">
+                <div>
+                    <h4 class="text-xs uppercase font-bold text-violet-400 tracking-wider">Bonus Mingguan (Hari Senin)</h4>
+                    <p class="text-xs text-slate-400 mt-0.5" id="statusMingguan">Syarat Valid Day Terpenuhi (+10%)</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-lg font-bold text-violet-400" id="valMingguan">Rp 0</span>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-pink-500/20 to-violet-600/20 p-6 rounded-2xl border-2 border-pink-500 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-32 h-32 bg-gradient-to-tr from-pink-500 to-violet-600 opacity-20 rounded-full blur-2xl"></div>
+                <h3 class="text-xs uppercase font-bold tracking-widest text-pink-400 mb-1">Total Akumulasi Pendapatan + Mingguan</h3>
+                <div class="text-3xl font-extrabold text-white" id="grandTotalPendapatan">Rp 0</div>
+                <p class="text-xs text-slate-400 mt-2">Akumulasi seluruh pendapatan kotor yang didapat dari pendapatan sesi ditambah klaim bonus mingguan.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-900 py-4 text-center text-xs text-slate-500 mt-12">
+        &copy; 2026 Live Creator Calculator Simulator. All rights reserved.
+    </footer>
+
+    <script>
+        // DOM Elements
+        const inputKursDolar = document.getElementById('kursDolar');
+        const calcHargaKoin = document.getElementById('calcHargaKoin');
+        const topHargaKoin = document.getElementById('topHargaKoin');
+        
+        const inputKoin = document.getElementById('koin');
+        const selectDurasi = document.getElementById('durasi');
+        const selectFollowers = document.getElementById('followers');
+        const checkValidDay = document.getElementById('validDay');
+
+        const outTotalPendapatan = document.getElementById('totalPendapatan');
+        const outTotalKotor = document.getElementById('totalKotor');
+        const outValDurasi = document.getElementById('valDurasi');
+        const outValFollower = document.getElementById('valFollower');
+        const outValMingguan = document.getElementById('valMingguan');
+        const outGrandTotal = document.getElementById('grandTotalPendapatan');
+        
+        const lblDurasi = document.getElementById('lblDurasi');
+        const lblFollower = document.getElementById('lblFollower');
+        const statusMingguan = document.getElementById('statusMingguan');
+
+        // Format Rupiah
+        function formatRupiah(angka) {
+            return 'Rp ' + Math.round(angka).toLocaleString('id-ID');
+        }
+
+        // Kalkulasi Utama
+        function hitungPendapatan() {
+            // Mengambil nilai Kurs Dolar saat ini dan konversi ke nilai per 1 koin
+            const kurs = parseFloat(inputKursDolar.value) || 17829;
+            
+            // Rumus estimasi: Kurs dibagi indeks proporsional koin (sekitar 84.09 untuk mendapatkan angka Rp 212 saat kurs 17829)
+            const hargaKoin = kurs / 84.099;
+            
+            // Perbarui visual info harga koin di form input & navbar header
+            calcHargaKoin.innerText = formatRupiah(hargaKoin);
+            topHargaKoin.innerText = formatRupiah(hargaKoin);
+
+            const koin = parseFloat(inputKoin.value) || 0;
+            const totalNilaiKotor = koin * hargaKoin;
+
+            // 1. Ambil Aturan Durasi Baru
+            const durasiValue = parseInt(selectDurasi.value);
+            let persenDurasi = 0;
+            
+            if (durasiValue === 5) {
+                persenDurasi = 20;
+            } else if (durasiValue < 5) {
+                persenDurasi = 20;
+            } else if (durasiValue < 10) {
+                persenDurasi = 30;
+            } else if (durasiValue < 25) {
+                persenDurasi = 35;
+            } else if (durasiValue > 60) {
+                persenDurasi = 40;
+            }
+
+            // 2. Ambil Aturan Followers
+            const followerValue = parseInt(selectFollowers.value);
+            let persenFollower = 0;
+
+            if (followerValue === 0) {
+                persenFollower = 0;
+            } else if (followerValue === 1) {
+                persenFollower = 1;
+            } else if (followerValue === 2) {
+                persenFollower = 1;
+            } else if (followerValue === 4) {
+                persenFollower = 1.5;
+            } else if (followerValue > 5) {
+                persenFollower = 2;
+            }
+
+            // 3. Bonus Mingguan (Hari Senin) = 10%
+            let persenMingguan = 0;
+            if (checkValidDay.checked) {
+                persenMingguan = 10;
+                statusMingguan.innerText = "Syarat Valid Day Terpenuhi (+10%)";
+                statusMingguan.className = "text-xs text-violet-400 mt-0.5";
+            } else {
+                persenMingguan = 0;
+                statusMingguan.innerText = "Tidak berhak mendapatkan bonus mingguan";
+                statusMingguan.className = "text-xs text-slate-500 mt-0.5";
+            }
+
+            // Hitung Nominal Rupiah masing-masing variabel
+            const nominalKotor = totalNilaiKotor;
+            const nominalDurasi = (persenDurasi / 100) * nominalKotor;
+            const nominalFollower = (persenFollower / 100) * nominalKotor;
+            const nominalMingguan = (persenMingguan / 100) * nominalKotor;
+
+            // Total Pendapatan Sesi Langsung (Durasi + Follower)
+            const totalSesiLangsung = nominalDurasi + nominalFollower;
+            
+            // Total Akumulasi Keseluruhan Pendapatan Kreator (Termasuk Mingguan)
+            const grandTotalDiterima = totalSesiLangsung + nominalMingguan;
+
+            // Update Tampilan UI
+            lblDurasi.innerText = `${persenDurasi}%`;
+            lblFollower.innerText = `${persenFollower}%`;
+
+            outTotalKotor.innerText = formatRupiah(nominalKotor);
+            outValDurasi.innerText = formatRupiah(nominalDurasi);
+            outValFollower.innerText = formatRupiah(nominalFollower);
+            outValMingguan.innerText = formatRupiah(nominalMingguan);
+            
+            outTotalPendapatan.innerText = formatRupiah(totalSesiLangsung);
+            outGrandTotal.innerText = formatRupiah(grandTotalDiterima);
+        }
+
+        // Event Listener Interaktif
+        inputKursDolar.addEventListener('input', hitungPendapatan);
+        inputKoin.addEventListener('input', hitungPendapatan);
+        selectDurasi.addEventListener('change', hitungPendapatan);
+        selectFollowers.addEventListener('change', hitungPendapatan);
+        checkValidDay.addEventListener('change', hitungPendapatan);
+
+        // Inisialisasi pertama kali
+        hitungPendapatan();
+    </script>
+</body>
+</html>
