@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Bulanan Kreator Digital Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+        }
+        .font-heading {
+            font-family: 'Poppins', sans-serif;
+        }
+        .custom-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body class="text-slate-300 min-h-screen flex flex-col justify-between antialiased">
+
+    <header class="relative overflow-hidden pt-12 pb-8 text-center px-4 bg-gradient-to-b from-slate-900 via-slate-900/80 to-transparent">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="inline-flex items-center gap-2 bg-indigo-500/10 text-indigo-400 text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4 border border-indigo-500/20 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+            Interactive Creator Platform 2026
+        </div>
+        
+        <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Kalkulator &  <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Bonus Bulanan Digital Academy 2026</span>
+        </h1>
+        <p class="mt-3 text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            Gunakan fitur simulator interaktif di bawah ini untuk menghitung potensi bonus Anda atau cari berdasarkan pencapaian Diamond Anda secara langsung!
+        </p>
+    </header>
+
+    <main class="max-w-6xl w-full mx-auto px-4 pb-16 flex-grow">
+        
+        <section class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 rounded-2xl border border-indigo-500/30 p-6 md:p-8 shadow-2xl mb-12 relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none"></div>
+            
+            <h2 class="font-heading text-xl font-bold text-white mb-6 flex items-center gap-2.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 002-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                Simulator & Kalkulator Bonus Host
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">1. Pilih Pencapaian Diamond</label>
+                    <select id="diamondSelect" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition-colors font-medium">
+                        <option value="10K">10K Diamond</option>
+                        <option value="20K">20K Diamond</option>
+                        <option value="30K">30K Diamond</option>
+                        <option value="40K">40K Diamond</option>
+                        <option value="50K" selected>50K Diamond</option>
+                        <option value="60K">60K Diamond</option>
+                        <option value="70K">70K Diamond</option>
+                        <option value="80K">80K Diamond</option>
+                        <option value="90K">90K Diamond</option>
+                        <option value="100K">100K Diamond</option>
+                        <option value="150K">150K Diamond</option>
+                        <option value="200K">200K Diamond</option>
+                        <option value="250k">250K Diamond</option>
+                        <option value="300k">300K Diamond</option>
+                        <option value="350k">350K Diamond</option>
+                        <option value="400k">400K Diamond</option>
+                        <option value="500k">500K Diamond</option>
+                        <option value="800k">800K Diamond</option>
+                        <option value="1.200.000">1.200K Diamond (1.2M)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">2. Status Peringkat Bulan Ini</label>
+                    <div class="grid grid-cols-3 gap-2 bg-slate-950 p-1.5 rounded-xl border border-slate-800">
+                        <label class="cursor-pointer text-center py-2 rounded-lg text-xs font-semibold transition-all select-none" id="lbl-bertahan">
+                            <input type="radio" name="statusPeringkat" value="bertahan" checked class="hidden">
+                            Bertahan
+                        </label>
+                        <label class="cursor-pointer text-center py-2 rounded-lg text-xs font-semibold transition-all select-none" id="lbl-naik">
+                            <input type="radio" name="statusPeringkat" value="naik" class="hidden">
+                            Naik
+                        </label>
+                        <label class="cursor-pointer text-center py-2 rounded-lg text-xs font-semibold transition-all select-none" id="lbl-turun">
+                            <input type="radio" name="statusPeringkat" value="turun" class="hidden">
+                            Turun
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">3. Syarat Durasi Live</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="relative">
+                            <input type="number" id="inputDays" value="22" min="0" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-4 pr-10 py-2.5 text-white focus:outline-none focus:border-cyan-500 text-sm font-semibold">
+                            <span class="absolute right-3 top-3 text-xs text-slate-500 font-medium">Hari</span>
+                        </div>
+                        <div class="relative">
+                            <input type="number" id="inputHours" value="90" min="0" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-4 pr-10 py-2.5 text-white focus:outline-none focus:border-cyan-500 text-sm font-semibold">
+                            <span class="absolute right-3 top-3 text-xs text-slate-500 font-medium">Jam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-950/60 p-5 rounded-2xl border border-slate-800/80">
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                    <span class="text-xs text-slate-400 block mb-1">Estimasi Bonus Anda</span>
+                    <div id="calcBonusResult" class="text-2xl font-extrabold text-emerald-400 font-heading">Rp250.000</div>
+                    <span id="calcLevelTag" class="text-[11px] text-cyan-400 mt-1 block">Mencapai Target Level 4</span>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                    <span class="text-xs text-slate-400 block mb-1">Status Validasi Syarat</span>
+                    <div id="calcStatusDurasi" class="text-base font-bold text-emerald-400 flex items-center gap-1.5 mt-1">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span> Memenuhi Syarat
+                    </div>
+                    <span id="calcDurasiDetail" class="text-[11px] text-slate-500 mt-1 block">Minimal: 22 Hari & 90 Jam</span>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-center">
+                    <span class="text-xs text-slate-400 block mb-1">Keterangan Dana</span>
+                    <p class="text-xs text-slate-400 leading-normal">
+                        100% bonus murni tambahan di luar pendapatan TikTok Anda.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-slate-900/50 backdrop-blur-md rounded-2xl border border-slate-800/80 shadow-2xl overflow-hidden mb-12">
+            <div class="p-6 bg-slate-900/90 border-b border-slate-800 flex justify-between items-center flex-wrap gap-4">
+                <div>
+                    <h2 class="font-heading text-lg font-bold text-white tracking-wide">Tabel Insentif Target Bulanan</h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Ketik target diamond untuk mencari data secara instan</p>
+                </div>
+                <div class="relative w-full sm:w-64">
+                    <input type="text" id="tableSearch" placeholder="Cari target diamond... (misal: 50K)" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-500 absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto custom-scroll">
+                <table class="w-full text-left border-collapse" id="bonusTable">
+                    <thead>
+                        <tr class="bg-slate-950/60 text-slate-400 text-xs uppercase tracking-wider font-semibold border-b border-slate-800/80">
+                            <th class="py-4 px-4 text-center w-16">No</th>
+                            <th class="py-4 px-5 text-center w-20">Level</th>
+                            <th class="py-4 px-6 text-cyan-400 font-medium">Target Diamond</th>
+                            <th class="py-4 px-6 text-emerald-400 font-medium">Bertahan</th>
+                            <th class="py-4 px-6 text-indigo-400 font-medium">Naik Peringkat</th>
+                            <th class="py-4 px-6 text-amber-500 font-medium">Turun Peringkat</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/40 text-sm font-medium">
+                        <tr class="hover:bg-slate-800/30 transition-colors" data-diamond="10K" data-level="1">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">1</td>
+                            <td class="py-3 px-5 text-center text-white bg-slate-800/20 font-bold">1</td>
+                            <td class="py-3 px-6 text-slate-200">10K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp50.000</td>
+                            <td class="py-3 px-6 text-slate-600 font-normal">-</td>
+                            <td class="py-3 px-6 text-slate-600 font-normal">-</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition-colors" data-diamond="20K" data-level="2">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">2</td>
+                            <td class="py-3 px-5 text-center text-white bg-slate-800/20 font-bold">2</td>
+                            <td class="py-3 px-6 text-slate-200">20K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp70.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp100.000</td>
+                            <td class="py-3 px-6 text-amber-500/90">Rp60.000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition-colors" data-diamond="30K" data-level="3">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">3</td>
+                            <td class="py-3 px-5 text-center text-white bg-slate-800/20 font-bold">3</td>
+                            <td class="py-3 px-6 text-slate-200">30K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp90.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp150.000</td>
+                            <td class="py-3 px-6 text-amber-500/90">Rp75.000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition-colors" data-diamond="40K" data-level="3">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">4</td>
+                            <td class="py-3 px-5 text-center text-slate-500 font-normal">-</td>
+                            <td class="py-3 px-6 text-slate-200">40K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp100.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp160.000</td>
+                            <td class="py-3 px-6 text-amber-500/90">Rp90.000</td>
+                        </tr>
+                        <tr class="bg-cyan-950/10 hover:bg-cyan-950/20 transition-colors border-l-2 border-cyan-500" data-diamond="50K" data-level="4">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">5</td>
+                            <td class="py-3 px-5 text-center text-cyan-400 font-bold bg-cyan-950/30">4</td>
+                            <td class="py-3 px-6 text-cyan-200 font-semibold">50K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp250.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp400.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp150.000</td>
+                        </tr>
+                        <tr class="bg-cyan-950/10 hover:bg-cyan-950/20 transition-colors border-l-2 border-cyan-500" data-diamond="60K" data-level="4">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">6</td>
+                            <td class="py-3 px-5 text-center text-slate-500 font-normal">-</td>
+                            <td class="py-3 px-6 text-cyan-200 font-semibold">60K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp300.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp450.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp175.000</td>
+                        </tr>
+                        <tr class="bg-cyan-950/10 hover:bg-cyan-950/20 transition-colors border-l-2 border-cyan-500" data-diamond="70K" data-level="4">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">7</td>
+                            <td class="py-3 px-5 text-center text-slate-500 font-normal">-</td>
+                            <td class="py-3 px-6 text-cyan-200 font-semibold">70K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp350.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp500.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp200.000</td>
+                        </tr>
+                        <tr class="bg-indigo-950/10 hover:bg-indigo-950/20 transition-colors border-l-2 border-indigo-500" data-diamond="80K" data-level="5">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">8</td>
+                            <td class="py-3 px-5 text-center text-indigo-400 font-bold bg-indigo-950/30">5</td>
+                            <td class="py-3 px-6 text-indigo-200 font-semibold">80K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp450.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp600.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp250.000</td>
+                        </tr>
+                        <tr class="bg-indigo-950/10 hover:bg-indigo-950/20 transition-colors border-l-2 border-indigo-500" data-diamond="90K" data-level="5">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">9</td>
+                            <td class="py-3 px-5 text-center text-slate-500 font-normal">-</td>
+                            <td class="py-3 px-6 text-indigo-200 font-semibold">90K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp500.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp750.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp300.000</td>
+                        </tr>
+                        <tr class="bg-indigo-950/10 hover:bg-indigo-950/20 transition-colors border-l-2 border-indigo-500" data-diamond="100K" data-level="5">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">10</td>
+                            <td class="py-3 px-5 text-center text-slate-500 font-normal">-</td>
+                            <td class="py-3 px-6 text-indigo-200 font-semibold">100K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp550.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp800.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp400.000</td>
+                        </tr>
+                        <tr class="bg-purple-950/10 hover:bg-purple-950/20 transition-colors border-l-2 border-purple-500" data-diamond="150K" data-level="6">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">11</td>
+                            <td class="py-3 px-5 text-center text-purple-400 font-bold bg-purple-950/30">6</td>
+                            <td class="py-3 px-6 text-purple-200 font-semibold">150K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp850.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp1.200.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp600.000</td>
+                        </tr>
+                        <tr class="bg-purple-950/10 hover:bg-purple-950/20 transition-colors border-l-2 border-purple-500" data-diamond="200K" data-level="6">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">12</td>
+                            <td class="py-3 px-5 text-center text-slate-500 font-normal">-</td>
+                            <td class="py-3 px-6 text-purple-200 font-semibold">200K</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp1.150.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp1.500.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp800.000</td>
+                        </tr>
+                        <tr class="bg-fuchsia-950/10 hover:bg-fuchsia-950/20 transition-colors border-l-2 border-fuchsia-500" data-diamond="250k" data-level="7">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">14</td>
+                            <td class="py-3 px-5 text-center text-fuchsia-400 font-bold bg-fuchsia-950/30">7</td>
+                            <td class="py-3 px-6 text-fuchsia-200 font-semibold">250k</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp1.400.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp2.000.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp1.000.000</td>
+                        </tr>
+                        <tr class="bg-fuchsia-950/10 hover:bg-fuchsia-950/20 transition-colors border-l-2 border-fuchsia-500" data-diamond="300k" data-level="7">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">15</td>
+                            <td class="py-3 px-5 text-center text-slate-500 font-normal">-</td>
+                            <td class="py-3 px-6 text-fuchsia-200 font-semibold">300k</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp1.600.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp2.200.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp1.200.000</td>
+                        </tr>
+                        <tr class="bg-rose-950/10 hover:bg-rose-950/20 transition-colors border-l-2 border-rose-500" data-diamond="350k" data-level="8">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">16</td>
+                            <td class="py-3 px-5 text-center text-rose-400 font-bold bg-rose-950/30">8</td>
+                            <td class="py-3 px-6 text-rose-200 font-semibold">350k</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp1.800.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp2.700.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp1.500.000</td>
+                        </tr>
+                        <tr class="bg-rose-950/10 hover:bg-rose-950/20 transition-colors border-l-2 border-rose-500" data-diamond="400k" data-level="8">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">17</td>
+                            <td class="py-3 px-5 text-center text-slate-500 font-normal">-</td>
+                            <td class="py-3 px-6 text-rose-200 font-semibold">400k</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp2.000.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp3.000.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp1.750.000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition-colors" data-diamond="500k" data-level="9">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">18</td>
+                            <td class="py-3 px-5 text-center text-white bg-slate-800/20 font-bold">9</td>
+                            <td class="py-3 px-6 text-slate-200">500k</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp2.500.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp4.000.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp2.000.000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition-colors" data-diamond="800k" data-level="10">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">19</td>
+                            <td class="py-3 px-5 text-center text-white bg-slate-800/20 font-bold">10</td>
+                            <td class="py-3 px-6 text-slate-200">800k</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp4.000.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp5.000.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp2.500.000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition-colors" data-diamond="1.200.000" data-level="11">
+                            <td class="py-3 px-4 text-center text-slate-600 font-normal">20</td>
+                            <td class="py-3 px-5 text-center text-white bg-slate-800/20 font-bold">11</td>
+                            <td class="py-3 px-6 text-slate-200">1.200.000</td>
+                            <td class="py-3 px-6 text-emerald-400">Rp5.000.000</td>
+                            <td class="py-3 px-6 text-indigo-400">Rp7.500.000</td>
+                            <td class="py-3 px-6 text-amber-500">Rp3.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="noResultMsg" class="hidden text-center py-8 text-sm text-slate-500 border-t border-slate-800">
+                Data target diamond tidak ditemukan. Silakan gunakan format angka/huruf (cth: 50K).
+            </div>
+        </div>
+
+        <div class="bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6 md:p-8 relative overflow-hidden">
+            <h3 class="font-heading text-lg font-bold text-white mb-6 flex items-center gap-2.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Syarat & Ketentuan Ketentuan Agen (Keterangan)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="p-4 rounded-xl bg-slate-950/50 border border-slate-800/60 flex items-start gap-3">
+                    <span class="bg-indigo-500/10 text-indigo-400 text-xs px-2 py-1 rounded-md font-bold">1</span>
+                    <p class="text-slate-300 leading-relaxed">Bonus hanya akan bisa diterima jika mendapatkan durasi diatas <span class="text-white font-semibold underline decoration-indigo-400">22 Valid day 90 Jam</span>.</p>
+                </div>
+                
+                <div class="p-4 rounded-xl bg-slate-950/50 border border-slate-800/60 flex items-start gap-3">
+                    <span class="bg-indigo-500/10 text-indigo-400 text-xs px-2 py-1 rounded-md font-bold">2</span>
+                    <p class="text-slate-300 leading-relaxed">Pendapatan diamond yang <span class="text-emerald-400 font-semibold">konsisten dan terus meningkat</span> menentukan bonus maksimal.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-950/50 border border-slate-800/60 flex items-start gap-3">
+                    <span class="bg-indigo-500/10 text-indigo-400 text-xs px-2 py-1 rounded-md font-bold">3</span>
+                    <p class="text-slate-300 leading-relaxed">Bonus ini diluar dari pendapatan kalian di aplikasi TikTok (<span class="text-emerald-400 font-semibold">100% Bonus tambahan dari Agensi</span>).</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-950/50 border border-slate-800/60 flex items-start gap-3">
+                    <span class="bg-indigo-500/10 text-indigo-400 text-xs px-2 py-1 rounded-md font-bold">4</span>
+                    <p class="text-slate-300 leading-relaxed"><span class="text-indigo-300 font-semibold">TIDAK WAJIB MENGEJAR BONUS</span>, ini hanya untuk yang mau bonus tambahan dari agensi saja.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-rose-950/20 border border-rose-900/40 flex items-start gap-3 md:col-span-2">
+                    <span class="bg-rose-500/10 text-rose-400 text-xs px-2 py-1 rounded-md font-bold">⚠️</span>
+                    <p class="text-rose-200/90 leading-relaxed"><span class="font-bold text-rose-400">Bonus Hangus</span> apabila akun terkena Pelanggaran Live Statis & Banned.</p>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-800/60 text-center">
+                <p class="text-[11px] text-amber-500/70 tracking-widest uppercase font-semibold">
+                    * TABLE BONUS BISA BERUBAH SEWAKTU-WAKTU MENGIKUTI KEBIJAKAN TIKTOK LIVE AGENCY *
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-6 text-center border-t border-slate-900 bg-slate-950/60 text-xs text-slate-500">
+        &copy; 2026 TikTok Live Manager. Data acuan resmi Digital Academy.
+    </footer>
+
+    <script>
+        // Database data mapping extracted accurately for simulator logic
+        const bonusDb = {
+            "10K": { level: "1", bertahan: "Rp50.000", naik: "-", turun: "-" },
+            "20K": { level: "2", bertahan: "Rp70.000", naik: "Rp100.000", turun: "Rp60.000" },
+            "30K": { level: "3", bertahan: "Rp90.000", naik: "Rp150.000", turun: "Rp75.000" },
+            "40K": { level: "3 (Sub Target)", bertahan: "Rp100.000", naik: "Rp160.000", turun: "Rp90.000" },
+            "50K": { level: "4", bertahan: "Rp250.000", naik: "Rp400.000", turun: "Rp150.000" },
+            "60K": { level: "4", bertahan: "Rp300.000", naik: "Rp450.000", turun: "Rp175.000" },
+            "70K": { level: "4", bertahan: "Rp350.000", naik: "Rp500.000", turun: "Rp200.000" },
+            "80K": { level: "5", bertahan: "Rp450.000", naik: "Rp600.000", turun: "Rp250.000" },
+            "90K": { level: "5", bertahan: "Rp500.000", naik: "Rp750.000", turun: "Rp300.000" },
+            "100K": { level: "5", bertahan: "Rp550.000", naik: "Rp800.000", turun: "Rp400.000" },
+            "150K": { level: "6", bertahan: "Rp850.000", naik: "Rp1.200.000", turun: "Rp600.000" },
+            "200K": { level: "6", bertahan: "Rp1.150.000", naik: "Rp1.500.000", turun: "Rp800.000" },
+            "250k": { level: "7", bertahan: "Rp1.400.000", naik: "Rp2.000.000", turun: "Rp1.000.000" },
+            "300k": { level: "7", bertahan: "Rp1.600.000", naik: "Rp2.200.000", turun: "Rp1.200.000" },
+            "350k": { level: "8", bertahan: "Rp1.800.000", naik: "Rp2.700.000", turun: "Rp1.500.000" },
+            "400k": { level: "8", bertahan: "Rp2.000.000", naik: "Rp3.000.000", turun: "Rp1.750.000" },
+            "500k": { level: "9", bertahan: "Rp2.500.000", naik: "Rp4.000.000", turun: "Rp2.000.000" },
+            "800k": { level: "10", bertahan: "Rp4.000.000", naik: "Rp5.000.000", turun: "Rp2.500.000" },
+            "1.200.000": { level: "11", bertahan: "Rp5.000.000", naik: "Rp7.500.000", turun: "Rp3.000.000" }
+        };
+
+        // DOM Elements
+        const diamondSelect = document.getElementById('diamondSelect');
+        const inputDays = document.getElementById('inputDays');
+        const inputHours = document.getElementById('inputHours');
+        const calcBonusResult = document.getElementById('calcBonusResult');
+        const calcLevelTag = document.getElementById('calcLevelTag');
+        const calcStatusDurasi = document.getElementById('calcStatusDurasi');
+        const tableSearch = document.getElementById('tableSearch');
+        const bonusTable = document.getElementById('bonusTable');
+        const noResultMsg = document.getElementById('noResultMsg');
+
+        // Manage Radio Button Custom UI Styles
+        const statusRadios = document.querySelectorAll('input[name="statusPeringkat"]');
+        
+        function updateRadioUI() {
+            statusRadios.forEach(radio => {
+                const label = document.getElementById(`lbl-${radio.value}`);
+                if (radio.checked) {
+                    label.className = "cursor-pointer text-center py-2 rounded-lg text-xs font-bold bg-indigo-600 text-white shadow-md";
+                } else {
+                    label.className = "cursor-pointer text-center py-2 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200";
+                }
+            });
+        }
+
+        // Main Calculation Engine
+        function calculateSimulation() {
+            const selectedDiamond = diamondSelect.value;
+            const activeRadio = document.querySelector('input[name="statusPeringkat"]:checked').value;
+            const currentDays = parseInt(inputDays.value) || 0;
+            const currentHours = parseInt(inputHours.value) || 0;
+
+            // Check Qualification Rules (MUST BE > 22 Valid Days & > 90 Hours based on spreadsheet)
+            const isQualified = (currentDays > 21) && (currentHours > 89);
+
+            // Update Validation Indicator UI
+            if (isQualified) {
+                calcStatusDurasi.className = "text-base font-bold text-emerald-400 flex items-center gap-1.5 mt-1";
+                calcStatusDurasi.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span> Memenuhi Syarat`;
+            } else {
+                calcStatusDurasi.className = "text-base font-bold text-rose-400 flex items-center gap-1.5 mt-1";
+                calcStatusDurasi.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span> Jam/Hari Kurang`;
+            }
+
+            // Get target pricing database record
+            const record = bonusDb[selectedDiamond];
+            if (record) {
+                calcLevelTag.innerText = `Mencapai Target Level ${record.level}`;
+                
+                if (!isQualified) {
+                    calcBonusResult.innerText = "Rp0";
+                    calcBonusResult.className = "text-2xl font-extrabold text-slate-500 font-heading line-through";
+                } else {
+                    let bonusAmount = "-";
+                    if (activeRadio === "bertahan") bonusAmount = record.bertahan;
+                    else if (activeRadio === "naik") bonusAmount = record.naik;
+                    else if (activeRadio === "turun") bonusAmount = record.turun;
+
+                    calcBonusResult.innerText = bonusAmount;
+                    if (bonusAmount === "-") {
+                        calcBonusResult.className = "text-2xl font-extrabold text-slate-500 font-heading";
+                    } else {
+                        calcBonusResult.className = "text-2xl font-extrabold text-emerald-400 font-heading";
+                    }
+                }
+            }
+        }
+
+        // Setup Event Listeners for Live Calculations
+        diamondSelect.addEventListener('change', calculateSimulation);
+        inputDays.addEventListener('input', calculateSimulation);
+        inputHours.addEventListener('input', calculateSimulation);
+        statusRadios.forEach(radio => radio.addEventListener('change', () => {
+            updateRadioUI();
+            calculateSimulation();
+        }));
+
+        // Table Filter / Live Search Engine
+        tableSearch.addEventListener('keyup', function() {
+            const query = this.value.toLowerCase().trim();
+            const rows = bonusTable.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+            let matchedCount = 0;
+
+            for (let i = 0; i < rows.length; i++) {
+                const diamondVal = rows[i].getAttribute('data-diamond').toLowerCase();
+                const levelVal = rows[i].getAttribute('data-level').toLowerCase();
+                
+                if (diamondVal.includes(query) || levelVal.includes(query)) {
+                    rows[i].style.display = "";
+                    matchedCount++;
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+
+            if (matchedCount === 0) {
+                noResultMsg.classList.remove('hidden');
+            } else {
+                noResultMsg.classList.add('hidden');
+            }
+        });
+
+        // Initialize view layout state on load
+        updateRadioUI();
+        calculateSimulation();
+    </script>
+</body>
+</html>
