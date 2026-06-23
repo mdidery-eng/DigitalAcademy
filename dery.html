@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dery | Tech & Lifestyle Navigator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#6366f1', /* Indigo */
+                        secondary: '#ec4899', /* Pink */
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulseSlower 3s infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        pulseSlower: {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.7 },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            @apply bg-gray-950 text-white overflow-x-hidden;
+        }
+        /* Glassmorphism yang dipergelap untuk kontras maksimal */
+        .glass-dark {
+            background: rgba(9, 9, 11, 0.85); /* Berbasis Zinc-950 yang solid tapi semi-transparan */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .link-card {
+            @apply transition-all duration-300 ease-in-out hover:scale-105 hover:bg-zinc-900/90 hover:border-indigo-500/50;
+        }
+        /* Penundaan Animasi */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Latar Belakang Video Sinematik dengan Lapisan Kegelapan Tinggi -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <video autoplay loop muted playsinline class="min-w-full min-h-full object-cover opacity-40">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-city-traffic-at-night-aerial-view-3135-large.mp4" type="video/mp4">
+        </video>
+        <!-- Overlay gelap dinaikkan ke black/75 agar tulisan di depan pop-out -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/90"></div>
+    </div>
+
+    <!-- Container Utama -->
+    <div class="relative w-full max-w-4xl mx-auto px-4 py-12 md:py-16 flex flex-col items-center">
+
+        <!-- Kartu Profil (Ultra Contrast Glass) -->
+        <div class="w-full max-w-xl glass-dark rounded-3xl p-8 mb-10 shadow-2xl flex flex-col items-center text-center animate-fade-in-up">
+            <div class="relative mb-5">
+                <div class="w-28 h-28 md:w-32 md:h-32 rounded-full border-4 border-primary overflow-hidden shadow-xl transform hover:rotate-6 transition-transform duration-300">
+                    <img src="https://mediadigital.co.id/dery.jpeg" alt="Dery MDI" class="w-full h-full object-cover">
+                </div>
+                <span class="absolute bottom-1 right-1 flex h-6 w-6">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-6 w-6 bg-secondary border-2 border-white"></span>
+                </span>
+            </div>
+            
+            <!-- Teks Profil Tebal & Terang -->
+            <h1 class="text-3xl md:text-4xl font-black tracking-wide text-white mb-2 dropped-shadow">Dery</h1>
+            <p class="text-base md:text-lg text-zinc-200 font-normal max-w-md leading-relaxed">
+                Navigating the digital landscape: Tech reviews, lifestyle hacks, and daily inspiration.
+            </p>
+            
+            <!-- Sosial Media Utama -->
+            <div class="flex space-x-6 mt-6">
+                <a href="#" class="text-zinc-400 hover:text-white transition-colors text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@pembawa.fyp" class="text-zinc-400 hover:text-white transition-colors text-2xl"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@dery_mdi" class="text-zinc-400 hover:text-white transition-colors text-2xl"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-zinc-400 hover:text-white transition-colors text-2xl"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <!-- Tombol Tautan (Sangat Kontras & Jelas) -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl px-2">
+
+            
+            <!-- Link 4: Kolaborasi Bisnis (Highlight Utama) -->
+            <a href="https://kelastiktok.com/kalkulator" 
+               class="link-card bg-indigo-950/90 border-2 border-indigo-500/60 flex items-center p-5 rounded-2xl shadow-xl animate-fade-in-up delay-4 hover:bg-indigo-900">
+                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-indigo-600 flex items-center justify-center mr-5 shadow-md">
+                    <i class="fas fa-handshake text-2xl text-white animate-pulse-slow"></i>
+                </div>
+                <div class="pr-2">
+                    <h2 class="text-xl font-extrabold text-white tracking-wide">Kalkulator Saldo TikTok</h2>
+                    <p class="text-sm text-indigo-200 mt-0.5 font-medium">Hitung berapa pendapatan saldo dari Gift Live.</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-indigo-400 text-base"></i>
+            </a>
+
+            
+            <!-- Link 4: Kolaborasi Bisnis (Highlight Utama) -->
+            <a href="https://kelastiktok.com/level" 
+               class="link-card bg-indigo-950/90 border-2 border-indigo-500/60 flex items-center p-5 rounded-2xl shadow-xl animate-fade-in-up delay-4 hover:bg-indigo-900">
+                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-indigo-600 flex items-center justify-center mr-5 shadow-md">
+                    <i class="fas fa-handshake text-2xl text-white animate-pulse-slow"></i>
+                </div>
+                <div class="pr-2">
+                    <h2 class="text-xl font-extrabold text-white tracking-wide">Level TikTok</h2>
+                    <p class="text-sm text-indigo-200 mt-0.5 font-medium">Hitung Berapa Total Pengeluaranmu untuk mencapai Level TikTok.</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-indigo-400 text-base"></i>
+            </a>
+
+            
+            <!-- Link 4: Kolaborasi Bisnis (Highlight Utama) -->
+            <a href="https://kelastiktok.com/rujukan" 
+               class="link-card bg-indigo-950/90 border-2 border-indigo-500/60 flex items-center p-5 rounded-2xl shadow-xl animate-fade-in-up delay-4 hover:bg-indigo-900">
+                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-indigo-600 flex items-center justify-center mr-5 shadow-md">
+                    <i class="fas fa-handshake text-2xl text-white animate-pulse-slow"></i>
+                </div>
+                <div class="pr-2">
+                    <h2 class="text-xl font-extrabold text-white tracking-wide">Reward Program Rujukan</h2>
+                    <p class="text-sm text-indigo-200 mt-0.5 font-medium">Bantu kreator agar mendapatkan bimbingan dari Manager TikTok Live secara GRATIS.</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-indigo-400 text-base"></i>
+            </a>
+
+            <!-- Link 1: TikTok -->
+            <a href="https://tiktok.com/@pembawa.fyp" target="_blank" 
+               class="link-card glass-dark flex items-center p-5 rounded-2xl shadow-xl animate-fade-in-up delay-1">
+                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mr-5 border border-white/20">
+                    <i class="fab fa-tiktok text-2xl text-white"></i>
+                </div>
+                <div class="pr-2">
+                    <h2 class="text-xl font-bold text-white tracking-wide">My Daily TikToks</h2>
+                    <p class="text-sm text-zinc-300 mt-0.5 font-light">Edukasi, Live Style, Programmer, Entertaint.</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-zinc-400 text-base"></i>
+            </a>
+
+            <!-- Link 2: YouTube -->
+            <a href="https://www.youtube.com/@dery_mdi" target="_blank" 
+               class="link-card glass-dark flex items-center p-5 rounded-2xl shadow-xl animate-fade-in-up delay-2">
+                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-red-600/20 flex items-center justify-center mr-5 border border-red-500/30">
+                    <i class="fab fa-youtube text-2xl text-red-500"></i>
+                </div>
+                <div class="pr-2">
+                    <h2 class="text-xl font-bold text-white tracking-wide">Deep Dive Tech</h2>
+                    <p class="text-sm text-zinc-300 mt-0.5 font-light">In-depth reviews and tutorials on YouTube.</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-zinc-400 text-base"></i>
+            </a>
+
+            <!-- Link 3: Instagram -->
+            <a href="#" target="_blank" 
+               class="link-card glass-dark flex items-center p-5 rounded-2xl shadow-xl animate-fade-in-up delay-3">
+                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-pink-500/20 flex items-center justify-center mr-5 border border-pink-500/30">
+                    <i class="fab fa-instagram text-2xl text-pink-400"></i>
+                </div>
+                <div class="pr-2">
+                    <h2 class="text-xl font-bold text-white tracking-wide">Curated Moments</h2>
+                    <p class="text-sm text-zinc-300 mt-0.5 font-light">Lifestyle & behind-the-scenes on Instagram.</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-zinc-400 text-base"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-8 text-xs text-zinc-500 mt-12 border-t border-zinc-900/80">
+        &copy; 2026 Dery MDI. Digital Navigator. Built for the future.
+    </footer>
+
+</body>
+</html>
